@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Concert+One&family=Denk+One&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Patrick+Hand&family=Poppins:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    user-select: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: linear-gradient(to right, #61cbff, #252525);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0.1);
+    width: 100%;
+}
+
+header .logo {
+    height: 100%;
+}
+
+header .logo a {
+    display: block;
+    width: 150px;
+}
+
+header .nav-bar {
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+header div a {
+    font-size: 2rem;
+    line-height: 40px;
+    width: 130px;
+    text-align: center;
+    font-weight: 500;
+    color: black;
+    font-family: Poppins, Jetbrains Mono;
+}
+
+header a:hover {
+    color: #80d0c7;
+    transform-origin: top;
+    text-decoration: underline;
+    transition: 0.75s all ease;
+}
+
+h1 {
+    text-align: center;
+    font-size: 5rem;
+    font-family: Denk One, Consolas, Patrick Hand;
+    margin: 5vh;
+}
+
+.content .image {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 400px;
+    overflow: hidden;
+}
+
+/* 225 x 300 */
+.content img {
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black, 0 0 20px black;
+}
+
+.content img:hover {
+    z-index: 1;
+    transform: translateX(30px) rotate(5deg);
+    box-shadow: 0 0 10px white, 0 0 20px white, 0 0 40px white;
+    transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+}
+
+.content .image:hover :not(:hover) {
+    filter: blur(1px);
+    z-index: 0;
+    opacity: 0.7;
+    transition: all 1s cubic-bezier(1, 0, 0, 1);
+}
+
+.content img:active {
+    animation: isActive 0.1s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes isActive {
+    0% {
+        transform: none;
+    }
+    
+    33.3% {
+       transform: rotate(-1deg); 
+    }
+
+    66.6% {
+        transform: rotate(1deg);
+    }
+
+    100% {
+        transform: none;
+    }
+}
+
+/* .content .pic1 {
+    position: relative;
+    animation: animate1 2s cubic-bezier(1, 0, 0, 1) alternate;
+}
+
+@keyframes animate1 {
+    0% {
+        right: 50px;
+        opacity: 0;
+    }
+
+    100% {
+        right: 0;
+    }
+}
+
+.content .pic2 {
+    position: relative;
+    animation: animate2 2.5s cubic-bezier(1, 0, 0, 1) alternate;
+}
+
+@keyframes animate2 {
+    0% {
+        top: 50px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+.content .pic3 {
+    position: relative;
+    animation: animate3 3s cubic-bezier(1, 0, 0, 1) alternate;
+}
+
+@keyframes animate3 {
+    0% {
+        bottom: 50px;
+        opacity: 0;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+.content .pic4 {
+    position: relative;
+    animation: animate4 3.5s cubic-bezier(1, 0, 0, 1) alternate;
+}
+
+@keyframes animate4 {
+    0% {
+        left: 50px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 0;
+    }
+} */
+
+@media screen and (max-width: 916px) {
+    .content .image {
+        height: 730px;
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    header {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 526px) {
+    .content .image {
+        height: 1000px;
+    }
+}
+
+@media screen and (max-width: 504px) {
+    .content .image {
+        height: 1400px;
+        padding: 30px;
+    }
+}
